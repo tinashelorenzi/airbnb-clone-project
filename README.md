@@ -48,7 +48,7 @@ airbnb-clone-project/
 └── .gitignore        # Git ignore rules
 ```
 
-## Developer
+## Team Roles
 
 ### Tinashe Matanda - Full Stack Software Developer
 - **Role**: Sole developer responsible for the entire AirBnB Clone project
