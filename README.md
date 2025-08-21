@@ -293,6 +293,40 @@ The notification system keeps users informed about important events such as book
 ### Database Security
 **Database access controls** will be implemented with principle of least privilege, ensuring database users have minimal required permissions. Regular security audits and vulnerability assessments will be conducted. This protects sensitive user data, booking information, and payment records from unauthorized access or data breaches that could compromise user privacy and platform integrity.
 
+## CI/CD Pipeline
+
+### What is CI/CD?
+**Continuous Integration (CI)** and **Continuous Deployment (CD)** are development practices that automate the process of building, testing, and deploying software applications. CI ensures that code changes are automatically tested and integrated into the main codebase, while CD automates the deployment of tested code to production environments. These practices help maintain code quality, reduce manual errors, and enable faster, more reliable software delivery.
+
+### Importance for the AirBnB Clone Project
+CI/CD pipelines are crucial for this project as they ensure consistent code quality, automate testing processes, and enable rapid deployment of new features and bug fixes. With multiple developers potentially contributing to the codebase, CI/CD helps catch integration issues early, maintains a stable production environment, and reduces the time between development and deployment. This is especially important for a booking platform where reliability and uptime are critical for user trust and business operations.
+
+### Tools and Technologies
+
+#### GitHub Actions
+**GitHub Actions** will be used as the primary CI/CD platform, providing automated workflows that trigger on code pushes and pull requests. The pipeline will include automated testing, code quality checks, and deployment to staging and production environments. This ensures that every code change is thoroughly tested before reaching users.
+
+#### Docker
+**Docker** will be used for containerization, ensuring consistent environments across development, testing, and production. Docker containers will package the application with all its dependencies, making deployment reliable and reproducible. This eliminates the "it works on my machine" problem and simplifies the deployment process.
+
+#### Testing Frameworks
+**Jest** for unit testing and **Supertest** for API testing will be integrated into the CI pipeline to ensure code quality and functionality. Automated tests will run on every commit, providing immediate feedback on code changes and preventing regressions from reaching production.
+
+#### Code Quality Tools
+**ESLint** and **Prettier** will be integrated to maintain consistent code style and catch potential issues early. **SonarQube** or similar tools may be used for code quality analysis and security scanning, ensuring the codebase meets industry standards.
+
+#### Deployment Platforms
+**Vercel** for frontend deployment and **Railway** or **Heroku** for backend deployment will be used to provide scalable, reliable hosting. These platforms offer easy integration with GitHub Actions and provide automatic scaling based on traffic demands.
+
+### Pipeline Workflow
+1. **Code Push** - Developer pushes code to GitHub repository
+2. **Automated Testing** - GitHub Actions runs unit tests, integration tests, and code quality checks
+3. **Build Process** - Application is built and packaged using Docker
+4. **Security Scan** - Automated security vulnerability scanning
+5. **Staging Deployment** - Code is deployed to staging environment for final testing
+6. **Production Deployment** - Approved code is automatically deployed to production
+7. **Monitoring** - Post-deployment monitoring and health checks
+
 ## Getting Started
 
 ### Prerequisites
