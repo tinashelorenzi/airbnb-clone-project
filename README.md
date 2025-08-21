@@ -264,6 +264,35 @@ Mobile responsive design ensures the application works seamlessly across all dev
 ### Notification System
 The notification system keeps users informed about important events such as booking confirmations, payment receipts, and message alerts. Notifications are delivered through multiple channels including email, in-app notifications, and push notifications for mobile devices. This feature enhances user engagement and ensures timely communication.
 
+## API Security
+
+### Authentication & Authorization
+**JWT (JSON Web Tokens)** will be implemented for secure user authentication, with token expiration and refresh mechanisms. Role-based access control (RBAC) will ensure users can only access resources they're authorized to view or modify. This prevents unauthorized access to sensitive user data and property information, protecting both guests and hosts from potential security breaches.
+
+### Rate Limiting & DDoS Protection
+**Rate limiting** will be implemented using middleware to prevent API abuse and brute force attacks. This includes limiting login attempts, API calls per user, and request frequency. DDoS protection measures will safeguard the application from distributed denial-of-service attacks, ensuring service availability and protecting against malicious traffic that could disrupt the booking system.
+
+### Data Encryption & HTTPS
+**HTTPS/TLS encryption** will be enforced for all API communications to protect data in transit. Sensitive user data (passwords, payment information) will be encrypted at rest using industry-standard encryption algorithms. This ensures that personal information, financial data, and communication between users remain secure and protected from interception or unauthorized access.
+
+### Input Validation & Sanitization
+**Comprehensive input validation** will be implemented to prevent SQL injection, XSS (Cross-Site Scripting), and other injection attacks. All user inputs will be sanitized and validated before processing. This protects the database from malicious queries and prevents attackers from executing harmful code through user-submitted content like property descriptions or reviews.
+
+### Payment Security
+**PCI DSS compliance** will be maintained for all payment processing operations. Payment data will be handled through secure third-party gateways (Stripe/PayPal) with tokenization to avoid storing sensitive payment information. This ensures that financial transactions are secure and compliant with industry standards, protecting users' credit card information and maintaining trust in the platform.
+
+### API Key Management
+**Secure API key management** will be implemented for third-party integrations and admin access. API keys will be rotated regularly, and access will be logged and monitored. This prevents unauthorized access to administrative functions and ensures that only authorized services can interact with the API, maintaining the integrity of the booking and payment systems.
+
+### Security Headers & CORS
+**Security headers** (HSTS, CSP, X-Frame-Options) will be implemented to protect against common web vulnerabilities. CORS (Cross-Origin Resource Sharing) policies will be configured to restrict unauthorized domain access. These measures prevent clickjacking attacks, cross-site scripting, and other client-side security vulnerabilities that could compromise user sessions or data.
+
+### Logging & Monitoring
+**Comprehensive security logging** will be implemented to track authentication attempts, API access patterns, and potential security incidents. Real-time monitoring and alerting systems will detect suspicious activities and potential breaches. This enables quick response to security threats and provides audit trails for compliance and incident investigation purposes.
+
+### Database Security
+**Database access controls** will be implemented with principle of least privilege, ensuring database users have minimal required permissions. Regular security audits and vulnerability assessments will be conducted. This protects sensitive user data, booking information, and payment records from unauthorized access or data breaches that could compromise user privacy and platform integrity.
+
 ## Getting Started
 
 ### Prerequisites
