@@ -232,6 +232,38 @@ Payments {
 }
 ```
 
+## Feature Breakdown
+
+### User Management
+The user management system handles user registration, authentication, and profile management. Users can create accounts, log in securely using JWT tokens, and maintain their profiles with personal information and preferences. This feature also includes role-based access control, distinguishing between regular users and property hosts.
+
+### Property Management
+Property management allows hosts to create, edit, and manage their property listings with detailed information including descriptions, photos, amenities, and pricing. Hosts can update availability calendars, modify property details, and view booking requests for their properties. This feature provides a comprehensive dashboard for hosts to manage multiple properties efficiently.
+
+### Search & Discovery
+The search and discovery feature enables users to find properties based on location, dates, price range, and specific amenities. Advanced filtering options include property type, number of bedrooms, and guest capacity. The system provides real-time search results with property previews and availability indicators to help users make informed decisions.
+
+### Booking System
+The booking system manages the entire reservation process from initial request to confirmation. Users can select check-in and check-out dates, specify guest count, and view total pricing including fees. The system handles booking conflicts, sends confirmation emails, and maintains booking history for both guests and hosts.
+
+### Review & Rating System
+The review and rating system allows guests to provide feedback on their stay experience with detailed ratings across multiple categories (cleanliness, communication, check-in, accuracy, location, and value). These reviews help future guests make informed decisions and provide hosts with valuable feedback to improve their listings.
+
+### Payment Integration
+Payment integration securely processes transactions using popular payment gateways like Stripe or PayPal. The system handles payment processing, refunds, and maintains transaction records. It supports multiple currencies and payment methods while ensuring PCI compliance and secure data handling.
+
+### Real-time Messaging
+Real-time messaging enables direct communication between guests and hosts through an instant messaging system. Users can discuss booking details, ask questions about properties, and coordinate check-in arrangements. The messaging system includes notifications and message history for seamless communication.
+
+### Admin Dashboard
+The admin dashboard provides comprehensive oversight of the platform with analytics, user management, and system monitoring capabilities. Administrators can view platform statistics, manage user accounts, moderate content, and handle disputes. This feature ensures platform integrity and provides insights for business decisions.
+
+### Mobile Responsive Design
+Mobile responsive design ensures the application works seamlessly across all devices and screen sizes. The interface adapts to different screen resolutions, providing an optimal user experience on smartphones, tablets, and desktop computers. This feature is essential for modern web applications where users access services from various devices.
+
+### Notification System
+The notification system keeps users informed about important events such as booking confirmations, payment receipts, and message alerts. Notifications are delivered through multiple channels including email, in-app notifications, and push notifications for mobile devices. This feature enhances user engagement and ensures timely communication.
+
 ## Getting Started
 
 ### Prerequisites
