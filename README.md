@@ -69,6 +69,169 @@ airbnb-clone-project/
   - Security implementation
 - **Skills**: Full-stack development, React.js, Node.js, MongoDB, TypeScript, Tailwind CSS, API design, database management, testing, deployment, and project management
 
+## Database Design
+
+### Key Entities
+
+#### Users
+- **id**: Unique identifier for each user
+- **email**: User's email address (unique)
+- **password**: Hashed password for authentication
+- **firstName**: User's first name
+- **lastName**: User's last name
+- **phoneNumber**: Contact phone number
+- **profileImage**: URL to user's profile picture
+- **isHost**: Boolean indicating if user is a property host
+- **createdAt**: Timestamp when account was created
+- **updatedAt**: Timestamp of last profile update
+
+#### Properties
+- **id**: Unique identifier for each property
+- **title**: Property listing title
+- **description**: Detailed property description
+- **address**: Property location address
+- **city**: City where property is located
+- **country**: Country where property is located
+- **price**: Nightly rental price
+- **bedrooms**: Number of bedrooms
+- **bathrooms**: Number of bathrooms
+- **maxGuests**: Maximum number of guests allowed
+- **amenities**: Array of available amenities
+- **images**: Array of property image URLs
+- **hostId**: Reference to the user who owns the property
+- **isAvailable**: Boolean indicating if property is available for booking
+- **createdAt**: Timestamp when listing was created
+- **updatedAt**: Timestamp of last listing update
+
+#### Bookings
+- **id**: Unique identifier for each booking
+- **propertyId**: Reference to the booked property
+- **guestId**: Reference to the user making the booking
+- **hostId**: Reference to the property owner
+- **checkInDate**: Date when guest will check in
+- **checkOutDate**: Date when guest will check out
+- **totalPrice**: Total cost for the entire stay
+- **numberOfGuests**: Number of guests for this booking
+- **status**: Booking status (pending, confirmed, cancelled, completed)
+- **createdAt**: Timestamp when booking was created
+- **updatedAt**: Timestamp of last booking update
+
+#### Reviews
+- **id**: Unique identifier for each review
+- **propertyId**: Reference to the reviewed property
+- **guestId**: Reference to the user who wrote the review
+- **hostId**: Reference to the property owner
+- **rating**: Numerical rating (1-5 stars)
+- **comment**: Text review content
+- **cleanliness**: Rating for cleanliness
+- **communication**: Rating for host communication
+- **checkIn**: Rating for check-in experience
+- **accuracy**: Rating for listing accuracy
+- **location**: Rating for location
+- **value**: Rating for value for money
+- **createdAt**: Timestamp when review was created
+
+#### Payments
+- **id**: Unique identifier for each payment
+- **bookingId**: Reference to the associated booking
+- **guestId**: Reference to the user making the payment
+- **hostId**: Reference to the property owner receiving payment
+- **amount**: Payment amount
+- **currency**: Payment currency (e.g., USD, EUR)
+- **paymentMethod**: Method used for payment (credit card, PayPal, etc.)
+- **status**: Payment status (pending, completed, failed, refunded)
+- **transactionId**: External payment processor transaction ID
+- **createdAt**: Timestamp when payment was processed
+
+### Entity Relationships
+
+- **Users → Properties**: One-to-Many relationship - A user (host) can have multiple properties
+- **Users → Bookings**: One-to-Many relationship - A user can make multiple bookings as a guest
+- **Properties → Bookings**: One-to-Many relationship - A property can have multiple bookings (at different times)
+- **Properties → Reviews**: One-to-Many relationship - A property can have multiple reviews from different guests
+- **Bookings → Reviews**: One-to-One relationship - Each booking can have one review (after completion)
+- **Bookings → Payments**: One-to-One relationship - Each booking has one associated payment
+- **Users → Reviews**: One-to-Many relationship - A user can write multiple reviews for different properties
+
+### Database Schema Overview
+
+```
+Users {
+  id: ObjectId
+  email: String (unique)
+  password: String (hashed)
+  firstName: String
+  lastName: String
+  phoneNumber: String
+  profileImage: String
+  isHost: Boolean
+  createdAt: Date
+  updatedAt: Date
+}
+
+Properties {
+  id: ObjectId
+  title: String
+  description: String
+  address: String
+  city: String
+  country: String
+  price: Number
+  bedrooms: Number
+  bathrooms: Number
+  maxGuests: Number
+  amenities: [String]
+  images: [String]
+  hostId: ObjectId (ref: Users)
+  isAvailable: Boolean
+  createdAt: Date
+  updatedAt: Date
+}
+
+Bookings {
+  id: ObjectId
+  propertyId: ObjectId (ref: Properties)
+  guestId: ObjectId (ref: Users)
+  hostId: ObjectId (ref: Users)
+  checkInDate: Date
+  checkOutDate: Date
+  totalPrice: Number
+  numberOfGuests: Number
+  status: String
+  createdAt: Date
+  updatedAt: Date
+}
+
+Reviews {
+  id: ObjectId
+  propertyId: ObjectId (ref: Properties)
+  guestId: ObjectId (ref: Users)
+  hostId: ObjectId (ref: Users)
+  rating: Number
+  comment: String
+  cleanliness: Number
+  communication: Number
+  checkIn: Number
+  accuracy: Number
+  location: Number
+  value: Number
+  createdAt: Date
+}
+
+Payments {
+  id: ObjectId
+  bookingId: ObjectId (ref: Bookings)
+  guestId: ObjectId (ref: Users)
+  hostId: ObjectId (ref: Users)
+  amount: Number
+  currency: String
+  paymentMethod: String
+  status: String
+  transactionId: String
+  createdAt: Date
+}
+```
+
 ## Getting Started
 
 ### Prerequisites
