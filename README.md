@@ -48,52 +48,26 @@ airbnb-clone-project/
 └── .gitignore        # Git ignore rules
 ```
 
-## Team Roles
+## Developer
 
-### Project Manager
-- **Responsibilities**: Oversees project planning, timeline management, and team coordination
-- **Key Tasks**: Sprint planning, stakeholder communication, risk management, and ensuring project deliverables are met on schedule
-- **Skills**: Agile methodologies, team leadership, communication, and project management tools
-
-### Frontend Developer
-- **Responsibilities**: Develops and maintains the user interface and client-side functionality
-- **Key Tasks**: Building responsive React components, implementing user interactions, optimizing frontend performance, and ensuring cross-browser compatibility
-- **Skills**: React.js, TypeScript, Tailwind CSS, JavaScript, HTML/CSS, responsive design principles
-
-### Backend Developer
-- **Responsibilities**: Develops server-side logic, APIs, and business logic implementation
-- **Key Tasks**: Creating RESTful APIs, implementing authentication and authorization, handling data processing, and ensuring API security
-- **Skills**: Node.js, Express.js, API design, authentication systems, server-side programming
-
-### Database Administrator (DBA)
-- **Responsibilities**: Manages database design, optimization, and data integrity
-- **Key Tasks**: Database schema design, query optimization, data migration, backup and recovery, and ensuring data security
-- **Skills**: MongoDB, database design, data modeling, performance tuning, data security
-
-### DevOps Engineer
-- **Responsibilities**: Manages deployment, infrastructure, and development operations
-- **Key Tasks**: CI/CD pipeline setup, server configuration, monitoring and logging, and ensuring application scalability
-- **Skills**: Docker, cloud platforms (AWS/Azure/GCP), CI/CD tools, monitoring systems
-
-### UI/UX Designer
-- **Responsibilities**: Creates user interface designs and ensures optimal user experience
-- **Key Tasks**: Wireframing, prototyping, user research, design system creation, and usability testing
-- **Skills**: Design tools (Figma, Sketch), user research, interaction design, visual design principles
-
-### Quality Assurance (QA) Engineer
-- **Responsibilities**: Ensures software quality through testing and quality assurance processes
-- **Key Tasks**: Test planning, automated testing, bug reporting, regression testing, and quality metrics tracking
-- **Skills**: Testing frameworks, automation tools, bug tracking systems, test case design
-
-### Security Engineer
-- **Responsibilities**: Implements and maintains security measures across the application
-- **Key Tasks**: Security audits, vulnerability assessment, implementing security best practices, and compliance monitoring
-- **Skills**: Security protocols, penetration testing, OWASP guidelines, encryption methods
-
-### Full-Stack Developer
-- **Responsibilities**: Works on both frontend and backend development tasks
-- **Key Tasks**: End-to-end feature development, code review, technical documentation, and cross-functional collaboration
-- **Skills**: Full tech stack knowledge, system architecture, problem-solving, and communication
+### Tinashe Matanda - Full Stack Software Developer
+- **Role**: Sole developer responsible for the entire AirBnB Clone project
+- **Responsibilities**: 
+  - Frontend development (React.js, TypeScript, Tailwind CSS)
+  - Backend development (Node.js, Express.js, MongoDB)
+  - Database design and management
+  - UI/UX design and implementation
+  - Testing and quality assurance
+  - Deployment and DevOps
+  - Project planning and documentation
+- **Key Tasks**: 
+  - End-to-end feature development
+  - Code review and optimization
+  - Technical documentation
+  - Testing and bug fixes
+  - Performance optimization
+  - Security implementation
+- **Skills**: Full-stack development, React.js, Node.js, MongoDB, TypeScript, Tailwind CSS, API design, database management, testing, deployment, and project management
 
 ## Getting Started
 
